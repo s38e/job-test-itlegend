@@ -48,7 +48,7 @@ export default function CourseTopicCard({
         }`}
         onClick={toggleOpen}
       >
-        <h3 className="text-2xl font-medium text-gray-900 tracking-tight leading-none">
+        <h3 className="text-xl sm:text-2xl font-medium text-gray-900 tracking-tight leading-none">
           {weekTitle}
         </h3>
         {collapsible && (
@@ -72,7 +72,7 @@ export default function CourseTopicCard({
       >
         <div className="overflow-hidden">
           {description && (
-            <p className="text-gray-500 text-lg leading-[1.2] mb-6">
+            <p className="text-gray-500 text-base sm:text-lg leading-[1.2] mb-6">
               {description}
             </p>
           )}
@@ -91,7 +91,7 @@ export default function CourseTopicCard({
                   </div>
 
                   <div className="flex flex-wrap items-center gap-3 min-w-0 flex-1">
-                    <span className="text-neutral-600 transition-colors duration-150 cursor-pointer text-base leading-snug wrap-break-word">
+                    <span className="text-neutral-600 transition-colors duration-150 cursor-pointer text-sm sm:text-base leading-snug wrap-break-word">
                       {item.title}
                     </span>
 
@@ -131,4 +131,3 @@ export default function CourseTopicCard({
     </div>
   );
 }
-

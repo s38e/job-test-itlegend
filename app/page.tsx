@@ -135,16 +135,26 @@ export default function Home() {
             Course Details
           </button>
         </div>
-        <h1 className="text-4xl font-semibold">Starting SEO as your Home</h1>
+        <h1 className="text-2xl sm:text-4xl font-semibold">
+          Starting SEO as your Home
+        </h1>
       </div>
-      <div className="grid grid-cols-12 gap-10 lg:gap-20 px-8">
-        <div className={`col-span-12 ${isWide ? "md:col-span-12 md:row-start-1" : "md:col-span-8 md:row-start-1"} order-1`}>
-          <CourseVideoPlayer isWide={isWide} onWideToggle={() => setIsWide(!isWide)} />
+      <div className="flex items-start flex-col md:grid grid-cols-12 gap-10 lg:gap-20 px-8">
+        <div
+          className={`col-span-12 ${isWide ? "md:col-span-12 md:row-start-1" : "md:col-span-8 md:row-start-1"} order-1`}
+        >
+          <CourseVideoPlayer
+            isWide={isWide}
+            onWideToggle={() => setIsWide(!isWide)}
+          />
         </div>
 
-        <div className="col-span-12 md:col-span-8 flex flex-col gap-16 md:row-start-2 order-2">
+        <div className="col-span-12 md:col-span-8 flex flex-col gap-16 md:row-start-2 order-2 w-full">
           <div className="flex flex-col gap-8 w-full">
-            <nav className="w-full flex flex-wrap items-center gap-3" aria-label="Course section navigation">
+            <nav
+              className="w-full flex flex-wrap items-center gap-3"
+              aria-label="Course section navigation"
+            >
               {sections.map((section, index) => {
                 const IconComponent = section.icon;
                 return (
@@ -171,9 +181,10 @@ export default function Home() {
                     aria-label={
                       "targetId" in section && section.targetId
                         ? `Scroll to ${section.targetId.replace("-section", "")}`
-                        : "action" in section && section.action === "ask-question"
-                        ? "Ask a question"
-                        : "View leaderboard"
+                        : "action" in section &&
+                            section.action === "ask-question"
+                          ? "Ask a question"
+                          : "View leaderboard"
                     }
                   >
                     <div className="p-1.5 rounded-md shrink-0">
@@ -233,10 +244,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={`col-span-12 md:col-span-4 md:col-start-9 min-h-96 flex flex-col w-full gap-18 ${isWide ? "md:row-start-2 md:row-span-2" : "md:row-start-1 md:row-span-3"} order-3`}>
+        <div
+          className={`col-span-12 md:col-span-4 md:col-start-9 min-h-96 flex flex-col w-full gap-18 ${isWide ? "md:row-start-2 md:row-span-2" : "md:row-start-1 md:row-span-3"} order-3`}
+        >
           <h2
             id="curriculum-section"
-            className="text-3xl font-medium scroll-mt-6"
+            className="text-2xl sm:text-3xl font-medium scroll-mt-6"
           >
             Topics for This Course
           </h2>

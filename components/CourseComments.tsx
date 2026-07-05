@@ -64,7 +64,7 @@ export default function CourseComments() {
 
   return (
     <div className="w-full flex flex-col gap-6 mt-6 font-cairo">
-      <h3 className="text-3xl font-semibold text-black tracking-tight">
+      <h3 className="text-2xl sm:text-3xl font-semibold text-black tracking-tight">
         Comments
       </h3>
 
