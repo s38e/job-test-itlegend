@@ -125,7 +125,7 @@ export default function Home() {
   const [selectedPdfTitle, setSelectedPdfTitle] = useState("");
   return (
     <main className="flex flex-col w-full max-w-[2000px] mx-auto gap-10 pb-20">
-      <div className="flex flex-col w-full gap-10 bg-[#F5F9FA] py-5 px-8">
+      <div className="flex flex-col w-full gap-10 bg-[#F5F9FA] py-5 px-4 md:px-8">
         <div className="text-foreground/80 flex items-center gap-1">
           <button className="cursor-pointer hover:underline">Home</button>{" "}
           <MdKeyboardArrowRight size={20} />{" "}
@@ -139,7 +139,7 @@ export default function Home() {
           Starting SEO as your Home
         </h1>
       </div>
-      <div className="flex items-start flex-col md:grid grid-cols-12 gap-10 lg:gap-20 px-8">
+      <div className="flex items-start flex-col md:grid grid-cols-12 gap-10 lg:gap-20 px-4 md:px-8">
         <div
           className={`col-span-12 ${isWide ? "md:col-span-12 md:row-start-1" : "md:col-span-8 md:row-start-1"} order-1`}
         >
@@ -249,7 +249,7 @@ export default function Home() {
         >
           <h2
             id="curriculum-section"
-            className="text-2xl sm:text-3xl font-medium scroll-mt-6"
+            className="text-2xl sm:text-3xl font-medium scroll-mt-[calc(64vw+24px)] md:scroll-mt-6"
           >
             Topics for This Course
           </h2>
@@ -286,7 +286,10 @@ export default function Home() {
         </div>
 
         <div className="col-span-12 md:col-span-8 md:row-start-3 order-4">
-          <div id="comments-section" className="scroll-mt-6">
+          <div
+            id="comments-section"
+            className="scroll-mt-[calc(56.25vw+24px)] md:scroll-mt-6"
+          >
             <CourseComments />
           </div>
         </div>
